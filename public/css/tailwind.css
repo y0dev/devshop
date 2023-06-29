@@ -1,0 +1,179 @@
+:root {
+    --section-rotate: 9vw;
+  
+    --color-white: #FFFFFF;
+    --color-shearwater-black: #5B5B6C;
+    --color-gray: #777777;
+    --color-cultured-gray: #F7F7F7;
+    --color-metallic-silver: #A6A5B1;
+    --color-light-gray: #DADADA;
+    --color-dark-gray: #484848;
+    --color-orange: #FF7730;
+    --color-copper-red: #C56B55;
+    --color-medium-carmine: #AC3E31;
+    --color-toolbox-blue: #727CB9;
+    --color-jelly-bean-blue: #488A99;
+    --color-dark-cornflower-blue: #1C4E80;
+    --color-indigo-dye: #14248A;
+    --color-bright-gray: #E8EDF2;
+    --color-maximum-blue: #55AFC5;
+    --color-yankees-blue: #20283E;
+    --color-pale-violet: #C388F6;
+    --color-violets-are-blue: #8C88F6;
+    --color-sunray: #DBAE58;
+    --color-mac-and-cheese: #F6C388;
+    --color-june-bud:#C7DB58;
+    --color-green: #20BF6B;
+    --color-jungle-green: #28B487;
+    --color-terra-cotta:#DB6D58;
+    --color-blush: #DB5885;
+    --color-pale-lavender: #E7CFFB;
+    --color-lavender-blue: #D1CFFB;
+    --color-champagne: #FBE7CF;
+    --color-carmine-pink: #EB4D4B;
+    --color-light-fuchsia: #F688F2;
+    --color-deep-fuchsia: #DB58C7;
+    --color-red: #E61A1A;
+  
+    --color-background: var(--color-cultured-gray);
+    --color-dash-background: var(--color-bright-gray);
+}
+
+
+.light {
+    --color-background: var(--color-cultured-gray);
+    --color-secondary-background: var(--color-shearwater-black);
+
+    --color-title-text: var(--color-shearwater-black);
+    --color-secondary-title-text: var(--color-cultured-gray);
+    --color-text: var(--color-dark-gray);
+    --color-secondary-text: var(--color-white);
+
+    --color-textfield: #BBB;
+    
+    --color-hover-btn: var(--color-shearwater-black);
+    --color-btn-text: var(--color-white);
+    --color-btn-bg: var(--color-jelly-bean-blue);
+    --color-toggle-btn-bg: var(--color-yankees-blue);
+}
+
+.dark {
+    --color-background: var(--color-shearwater-black);
+    --color-secondary-background: var(--color-cultured-gray);
+
+    --color-title-text: var(--color-cultured-gray);
+    --color-secondary-title-text: var(--color-shearwater-black);
+    --color-text: var(--color-white);
+    --color-secondary-text: var(--color-dark-gray);
+    
+    --color-textfield: #BBB;
+
+    --color-hover-btn: var(--color-cultured-gray);
+    --color-btn-text: var(--color-dark-gray);
+    --color-btn-bg: var(--color-jelly-bean-blue);
+    --color-toggle-btn-bg: var(--color-yankees-blue);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#toggle_nav:checked ~ div #hamburger #line
+{
+    @apply rotate-45 translate-y-1.5 
+}
+
+#toggle_nav:checked ~ div #hamburger #line2
+{
+    @apply -rotate-45 -translate-y-1
+}
+
+.hide-btn {
+  display: none;
+}
+
+.spinner-border {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.form-radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    flex-shrink: 0;
+    border-radius: 100%;
+    border-width: 2px;
+  }
+  
+  .form-radio:checked {
+    background-image: url("/img/circle-solid-16.svg");
+    border-color: transparent;
+    background-color: currentColor;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  @media not print {
+    .form-radio::-ms-check {
+      border-width: 1px;
+      color: transparent;
+      background: inherit;
+      border-color: inherit;
+      border-radius: inherit;
+    }
+  }
+  
+  .form-radio:focus {
+    outline: none;
+  }
+  
+  .form-select {
+    background-image: url("/img/circle-solid-24.svg");
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background-repeat: no-repeat;
+    padding-top: 0.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-position: right 0.5rem center;
+    background-size: 1.5em 1.5em;
+  }
+  
+  .form-select::-ms-expand {
+    color: #a0aec0;
+    border: none;
+  }
+  
+  @media not print {
+    .form-select::-ms-expand {
+      display: none;
+    }
+  }
+  
+  @media print and (-ms-high-contrast: active), print and (-ms-high-contrast: none) {
+    .form-select {
+      padding-right: 0.75rem;
+    }
+  }

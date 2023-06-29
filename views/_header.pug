@@ -1,0 +1,44 @@
+header.bg-gray-900.text-tc-primary.body-font
+  nav.bg-white.border-gray-200
+    .max-w-screen-xl.flex.flex-wrap.relative.items-center.justify-between.mx-auto.p-4
+      a.flex.items-center.pl-4(href="/", class="md:pl-8")
+        img.h-10.mr-3(src="/img/brand-logo.png", alt="brand-logo")
+        h3.text-2xl.font-bold.text-gray-900 Dev's Shop
+
+      a(href="#home") Home
+      a(href="#about") About
+      a(href="#menu") Menu
+      a(href="#products") Product
+      a(href="#review") Review
+      a(href="#about") Contact
+      a(href="#blogs") Blogs
+
+      .icons 
+        .bx.bx-search
+        .bx.bx-cart
+        .bx.bx-barcode
+      
+      .search-form 
+        input#search-box(type="search",placeholder="Search...")
+        label.bx.bx-search(for="search-box") 
+
+      .cart-items-container.absolute.top-full.right-0.px-5.bg-white.z-100(class="w-100 h-1/4") 
+        .cart-item.flex.relative.m-y-8.item-center.gap-6 
+          span.bx.bx-plus.absolute.rotate-45.text-2xl.text-black.cursor-pointer.top-4.right-4
+          img.h-28(src="/img/cart-item-1.jpg" alt="image")
+          .content 
+            h3.text-2xl.text-black Cart Item 1
+            .price.text-lg.text-primary.pb-2 $15.99
+        .cart-item.flex.relative.m-y-8.item-center.gap-6 
+          span.bx.bx-plus.absolute.rotate-45.text-2xl.text-black.cursor-pointer.top-4.right-4
+          img.h-28(src="/img/cart-item-2.jpg" alt="image")
+          .content 
+            h3.text-2xl.text-black Cart Item 2
+            .price.text-lg.text-primary.pb-2 $25.99
+        .cart-item.flex.relative.m-y-8.item-center.gap-6 
+          span.bx.bx-plus.absolute.rotate-45.text-2xl.text-black.cursor-pointer.top-4.right-4
+          img.h-28(src="/img/cart-item-3.jpg" alt="image")
+          .content 
+            h3.text-2xl.text-black Cart Item 3
+            .price.text-lg.text-primary.pb-2 $5.99
+        a(href="#" class="hover:tracking-widest").btn.mt-4.inline-block.text-lg.text-white.text-center.bg-primary.cursor-pointer.w-full Checkout Now

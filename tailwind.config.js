@@ -166,6 +166,7 @@ module.exports = {
       240: "60rem",
       285: "71.25rem",
       330: "82.5rem",
+      "7/100": "7%",
       "70/100": "70%",
       "31/100": "31%",
       "15/100": "15%",
@@ -197,6 +198,7 @@ module.exports = {
     backgroundColor: ({ theme }) => theme("colors"),
     backgroundImage: {
       none: "none",
+      "home-image": "url('/img/home-img.jpg')",
       "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
       "gradient-to-tr":
         "linear-gradient(to top right, var(--tw-gradient-stops))",
@@ -226,6 +228,8 @@ module.exports = {
       auto: "auto",
       cover: "cover",
       contain: "contain",
+      "50%": "50%",
+      16: "4rem",
     },
     blur: {
       0: "0",
@@ -605,6 +609,7 @@ module.exports = {
     height: ({ theme }) => ({
       auto: "auto",
       ...theme("spacing"),
+      5: "5rem",
       "1/2": "50%",
       "1/3": "33.333333%",
       "2/3": "66.666667%",
@@ -635,6 +640,7 @@ module.exports = {
       "1/4": "25%",
       "2/4": "50%",
       "3/4": "75%",
+      "23/20": "115%",
       full: "100%",
     }),
     keyframes: {
@@ -985,6 +991,7 @@ module.exports = {
     width: ({ theme }) => ({
       auto: "auto",
       ...theme("spacing"),
+      50: "50rem",
       "1/2": "50%",
       "1/3": "33.333333%",
       "2/3": "66.666667%",

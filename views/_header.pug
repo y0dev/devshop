@@ -1,5 +1,5 @@
-header.bg-gray-900.text-tc-primary.body-font
-  nav.bg-white.border-gray-200
+header.text-tc-primary.body-font.border-b-2.border-white
+  nav.bg-black
     .max-w-screen-xl.flex.flex-wrap.relative.items-center.justify-between.mx-auto.p-4
       a.flex.items-center.pl-4(href="/", class="md:pl-8")
         img.h-10.mr-3(src="/img/brand-logo.png", alt="brand-logo")
@@ -15,30 +15,30 @@ header.bg-gray-900.text-tc-primary.body-font
 
       .icons 
         .bx.bx-search
-        .bx.bx-cart
-        .bx.bx-barcode
+        #cart-btn.bx.bx-cart
+        #menu-btn.bx.bx-menu.inline-block(class="md:block")
       
-      .search-form 
-        input#search-box(type="search",placeholder="Search...")
-        label.bx.bx-search(for="search-box") 
+      .search-form.flex.item-center.absolute.w-50.h-5.scale-y-0.origin-top(class="top-23/20")
+        input#search-box.h-full.w-full.text-lg.p-4.normal-case(type="search",placeholder="Search...")
+        label.bx.bx-search.cursor-pointer.text-xl.mr-10(for="search-box") 
 
-      .cart-items-container.absolute.top-full.right-0.px-5.bg-white.z-100(class="w-100 h-1/4") 
-        .cart-item.flex.relative.m-y-8.item-center.gap-6 
+      .cart-items-container.absolute.top-full.-right-full.px-5.bg-white(class="w-100") 
+        .cart-item.flex.relative.my-8.item-center.gap-6 
           span.bx.bx-plus.absolute.rotate-45.text-2xl.text-black.cursor-pointer.top-4.right-4
           img.h-28(src="/img/cart-item-1.jpg" alt="image")
           .content 
             h3.text-2xl.text-black Cart Item 1
             .price.text-lg.text-primary.pb-2 $15.99
-        .cart-item.flex.relative.m-y-8.item-center.gap-6 
+        .cart-item.flex.relative.my-8.item-center.gap-6 
           span.bx.bx-plus.absolute.rotate-45.text-2xl.text-black.cursor-pointer.top-4.right-4
           img.h-28(src="/img/cart-item-2.jpg" alt="image")
           .content 
             h3.text-2xl.text-black Cart Item 2
             .price.text-lg.text-primary.pb-2 $25.99
-        .cart-item.flex.relative.m-y-8.item-center.gap-6 
+        .cart-item.flex.relative.my-8.item-center.gap-6 
           span.bx.bx-plus.absolute.rotate-45.text-2xl.text-black.cursor-pointer.top-4.right-4
           img.h-28(src="/img/cart-item-3.jpg" alt="image")
           .content 
             h3.text-2xl.text-black Cart Item 3
             .price.text-lg.text-primary.pb-2 $5.99
-        a(href="#" class="hover:tracking-widest").btn.mt-4.inline-block.text-lg.text-white.text-center.bg-primary.cursor-pointer.w-full Checkout Now
+        a(href="#" class="hover:tracking-widest").btn.mt-4.inline-block.text-lg.text-white.text-center.bg-primary.cursor-pointer.w-full.mb-4.h- Checkout Now

@@ -40,53 +40,16 @@
 }
 
 
-.light {
-    --color-background: var(--color-cultured-gray);
-    --color-secondary-background: var(--color-shearwater-black);
-
-    --color-title-text: var(--color-shearwater-black);
-    --color-secondary-title-text: var(--color-cultured-gray);
-    --color-text: var(--color-dark-gray);
-    --color-secondary-text: var(--color-white);
-
-    --color-textfield: #BBB;
-    
-    --color-hover-btn: var(--color-shearwater-black);
-    --color-btn-text: var(--color-white);
-    --color-btn-bg: var(--color-jelly-bean-blue);
-    --color-toggle-btn-bg: var(--color-yankees-blue);
-}
-
-.dark {
-    --color-background: var(--color-shearwater-black);
-    --color-secondary-background: var(--color-cultured-gray);
-
-    --color-title-text: var(--color-cultured-gray);
-    --color-secondary-title-text: var(--color-shearwater-black);
-    --color-text: var(--color-white);
-    --color-secondary-text: var(--color-dark-gray);
-    
-    --color-textfield: #BBB;
-
-    --color-hover-btn: var(--color-cultured-gray);
-    --color-btn-text: var(--color-dark-gray);
-    --color-btn-bg: var(--color-jelly-bean-blue);
-    --color-toggle-btn-bg: var(--color-yankees-blue);
-}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-#toggle_nav:checked ~ div #hamburger #line
-{
-    @apply rotate-45 translate-y-1.5 
-}
-
-#toggle_nav:checked ~ div #hamburger #line2
-{
-    @apply -rotate-45 -translate-y-1
+@layer base {
+  :root {
+    --alpha-black: 255, 255, 255
+    /* ... */
+  }
 }
 
 .hide-btn {

@@ -1,5 +1,5 @@
 doctype html
-html
+html.scroll-pt-36.overflow-hidden.scroll-smooth
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -36,5 +36,16 @@ html
 
       // FOOTER
       include _footer
+
+      //- Cookie Popup
+    cookie.cookie-popup.absolute.bottom-50.left-4.p-8.bg-white.max-w-sm.rounded-2xl.text-center.capitalize.shadow-md 
+      img.mx-auto.max-w-24(src="/img/cookie.png", alt="")
+      .container
+        .content.mt-5
+          header Cookie Consistent
+          p.normal-case.mt-2.mb-4 This website use cookies to ensure you get the best experience on our website.
+          .button-container.flex.items-center.justify-center
+            button.mx-4.px-8.py-4.rounded-xl.bg-primary.font-medium.transition-all.ease-in-out(class="hover:scale-90") I understand
+            a.mx-4.text-primary(href="#") learn more
 
     script(src="/js/bundle.js")

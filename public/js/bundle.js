@@ -120,6 +120,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"index.js":[function(require,module,exports) {
 /* eslint-disable */
 var navbar = document.querySelector("header nav");
+var cookie = document.querySelector("cookie.cookie-popup");
 if (navbar) {
   document.querySelector("#menu-btn").onclick = function () {
     navbar.classList.toggle("active");
@@ -128,6 +129,28 @@ if (navbar) {
   document.querySelector("#cart-btn").onclick = function () {
     cartItem.classList.toggle("right-0");
   };
+  var searchForm = document.querySelector(".search-form");
+  document.querySelector("#search-btn").onclick = function () {
+    searchForm.classList.toggle("scale-y-100");
+  };
+}
+if (cookie) {
+  var acceptBtn = cookie.querySelector("button");
+  var HOUR = 60 * 60;
+  var MONTH = 24 * 30 * HOUR;
+  acceptBtn.onclick = function () {
+    // Setting cookie for 1 month, after 1 month it will expire automatically
+    document.cookie = "CookieBy=DevShop; max-age=" + MONTH;
+    if (document.cookie) {
+      // If cookie is set
+      cookie.classList.add("hidden");
+    } else {
+      // Cookie can't be set, please unblock this cookie setting
+    }
+  };
+  var checkCookie = document.cookie.indexOf("CookieBy=DevShop"); //checking our cookie
+  //if cookie is set then hide the cookie box else show it
+  checkCookie != -1 ? cookie.classList.add("hidden") : cookie.classList.remove("hidden");
 }
 },{}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -154,7 +177,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60240" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59864" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

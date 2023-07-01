@@ -3,24 +3,23 @@ header.text-tc-primary.body-font.border-b-2.border-white
     .max-w-screen-xl.flex.flex-wrap.relative.items-center.justify-between.mx-auto.p-4
       a.flex.items-center.pl-4(href="/", class="md:pl-8")
         img.h-10.mr-3(src="/img/brand-logo.png", alt="brand-logo")
-        h3.text-2xl.font-bold.text-gray-900 Dev's Shop
 
-      a(href="#home") Home
-      a(href="#about") About
-      a(href="#menu") Menu
-      a(href="#products") Product
-      a(href="#review") Review
-      a(href="#about") Contact
-      a(href="#blogs") Blogs
+      a.block.m-4.p-2(href="#home" class="lg:m-0 lg:p-0 hover:text-primary") Home
+      a.block.m-4.p-2(href="#about" class="lg:m-0 lg:p-0 hover:text-primary") About
+      a.block.m-4.p-2(href="#menu" class="lg:m-0 lg:p-0 hover:text-primary") Menu
+      a.block.m-4.p-2(href="#products" class="lg:m-0 lg:p-0 hover:text-primary") Product
+      a.block.m-4.p-2(href="#review" class="lg:m-0 lg:p-0 hover:text-primary") Review
+      a.block.m-4.p-2(href="#about" class="lg:m-0 lg:p-0 hover:text-primary") Contact
+      a.block.m-4.p-2(href="#blogs" class="lg:m-0 lg:p-0 hover:text-primary") Blogs
 
       .icons 
-        .bx.bx-search
-        #cart-btn.bx.bx-cart
-        #menu-btn.bx.bx-menu.inline-block(class="md:block")
+        #search-btn.bx.bx-search.text-2xl.ml-8(class="hover:text-primary")
+        #cart-btn.bx.bx-cart.text-2xl.ml-8(class="hover:text-primary")
+        #menu-btn.bx.bx-menu.text-2xl.ml-8.inline-block(class="hover:text-primary md:hidden md:block")
       
-      .search-form.flex.item-center.absolute.w-50.h-5.scale-y-0.origin-top(class="top-23/20")
+      .search-form.flex.item-center.absolute.h-12.right-8.scale-y-0.origin-top(class="w-11/12 lg:w-50 top-23/20")
         input#search-box.h-full.w-full.text-lg.p-4.normal-case(type="search",placeholder="Search...")
-        label.bx.bx-search.cursor-pointer.text-xl.mr-10(for="search-box") 
+        label.bx.bx-search.cursor-pointer.text-xl.mr-10.text-black(class="hover:text-primary" for="search-box") 
 
       .cart-items-container.absolute.top-full.-right-full.px-5.bg-white(class="w-100") 
         .cart-item.flex.relative.my-8.item-center.gap-6 
@@ -41,4 +40,4 @@ header.text-tc-primary.body-font.border-b-2.border-white
           .content 
             h3.text-2xl.text-black Cart Item 3
             .price.text-lg.text-primary.pb-2 $5.99
-        a(href="#" class="hover:tracking-widest").btn.mt-4.inline-block.text-lg.text-white.text-center.bg-primary.cursor-pointer.w-full.mb-4.h- Checkout Now
+        a(href="#" class="hover:tracking-widest").btn.mt-4.py-4.inline-block.text-lg.text-white.text-center.bg-primary.cursor-pointer.w-full.mb-4.h- Checkout Now

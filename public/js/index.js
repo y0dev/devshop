@@ -1,19 +1,31 @@
 /* eslint-disable */
-const navbar = document.querySelector("header nav");
+const navbar = document.querySelector("header nav #navbar");
 const cookie = document.querySelector("cookie.cookie-popup");
 
 if (navbar) {
   document.querySelector("#menu-btn").onclick = () => {
-    navbar.classList.toggle("active");
+    navbar.classList.toggle("hidden");
+    searchForm.classList.remove("scale-y-100");
+    cartItem.classList.remove("right-0");
   };
   const cartItem = document.querySelector(".cart-items-container");
   document.querySelector("#cart-btn").onclick = () => {
     cartItem.classList.toggle("right-0");
+    navbar.classList.add("hidden");
+    searchForm.classList.remove("scale-y-100");
   };
 
   const searchForm = document.querySelector(".search-form");
   document.querySelector("#search-btn").onclick = () => {
     searchForm.classList.toggle("scale-y-100");
+    navbar.classList.add("hidden");
+    cartItem.classList.remove("right-0");
+  };
+
+  window.onscroll = () => {
+    navbar.classList.add("hidden");
+    searchForm.classList.remove("scale-y-100");
+    cartItem.classList.remove("right-0");
   };
 }
 

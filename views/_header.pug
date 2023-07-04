@@ -1,25 +1,33 @@
-header.text-tc-primary.body-font.border-b-2.border-white
+header.text-primary.text-sm.w-full.z-20.top-0.left-0.border-b-2.border-white(class="md:text-md")
   nav.bg-black
     .max-w-screen-xl.flex.flex-wrap.relative.items-center.justify-between.mx-auto.p-4
       a.flex.items-center.pl-4(href="/", class="md:pl-8")
         img.h-10.mr-3(src="/img/brand-logo.png", alt="brand-logo")
+      #navbar.order-2.items-center.justify-between.hidden.w-full(class="md:flex md:w-auto md:order-1")
+        ul.flex.flex-col.p-4.mt-4.border.border-gray-100.rounded-lg.bg-white(class="md:flex-row md:space-x-8 md:mt-0 md:border-none md:bg-black ")
+          li
+            a.block.mx-2.p-2(href="#home" aria-current="page" class="hover:text-white") Home
+          li
+            a.block.mx-2.p-2(href="#about" class="hover:text-white") About
+          li
+            a.block.mx-2.p-2(href="#menu" class="hover:text-white") Menu 
+          li
+            a.block.mx-2.p-2(href="#products" class="hover:text-white") Products
+          li
+            a.block.mx-2.p-2(href="#review" class="hover:text-white") Review
+          li
+            a.block.mx-2.p-2(href="#about" class="hover:text-white") Contact
+          li
+            a.block.mx-2.p-2(href="#blogs" class="hover:text-white") Blogs
 
-      a.block.m-4.p-2(href="#home" class="lg:m-0 lg:p-0 hover:text-primary") Home
-      a.block.m-4.p-2(href="#about" class="lg:m-0 lg:p-0 hover:text-primary") About
-      a.block.m-4.p-2(href="#menu" class="lg:m-0 lg:p-0 hover:text-primary") Menu
-      a.block.m-4.p-2(href="#products" class="lg:m-0 lg:p-0 hover:text-primary") Product
-      a.block.m-4.p-2(href="#review" class="lg:m-0 lg:p-0 hover:text-primary") Review
-      a.block.m-4.p-2(href="#about" class="lg:m-0 lg:p-0 hover:text-primary") Contact
-      a.block.m-4.p-2(href="#blogs" class="lg:m-0 lg:p-0 hover:text-primary") Blogs
-
-      .icons 
-        #search-btn.bx.bx-search.text-2xl.ml-8(class="hover:text-primary")
-        #cart-btn.bx.bx-cart.text-2xl.ml-8(class="hover:text-primary")
-        #menu-btn.bx.bx-menu.text-2xl.ml-8.inline-block(class="hover:text-primary md:hidden md:block")
+      .icons.order-1(class="md:order-2") 
+        #search-btn.bx.bx-search.text-xl.ml-8(class="hover:text-white")
+        #cart-btn.bx.bx-cart.text-xl.ml-8(class="hover:text-white")
+        #menu-btn.bx.bx-menu.text-xl.ml-8.inline-block(class="hover:text-white md:hidden md:block" aria-controls="navbar" aria-expanded="false")
       
       .search-form.flex.item-center.absolute.h-12.right-8.scale-y-0.origin-top(class="w-11/12 lg:w-50 top-23/20")
         input#search-box.h-full.w-full.text-lg.p-4.normal-case(type="search",placeholder="Search...")
-        label.bx.bx-search.cursor-pointer.text-xl.mr-10.text-black(class="hover:text-primary" for="search-box") 
+        label.bx.bx-search.cursor-pointer.text-xl.mr-10.text-black(class="hover:text-white" for="search-box") 
 
       .cart-items-container.absolute.top-full.-right-full.px-5.bg-white(class="w-100") 
         .cart-item.flex.relative.my-8.item-center.gap-6 

@@ -730,6 +730,9 @@ video {
 .bottom-50 {
     bottom: 12.5rem;
 }
+.left-0 {
+    left: 0px;
+}
 .left-4 {
     left: 1rem;
 }
@@ -742,6 +745,9 @@ video {
 .right-8 {
     right: 2rem;
 }
+.top-0 {
+    top: 0px;
+}
 .top-23\/20 {
     top: 115%;
 }
@@ -751,8 +757,18 @@ video {
 .top-full {
     top: 100%;
 }
-.m-4 {
-    margin: 1rem;
+.z-20 {
+    z-index: 20;
+}
+.order-1 {
+    order: 1;
+}
+.order-2 {
+    order: 2;
+}
+.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 .mx-4 {
     margin-left: 1rem;
@@ -901,11 +917,21 @@ video {
 .rounded-2xl {
     border-radius: 1rem;
 }
+.rounded-lg {
+    border-radius: 0.5rem;
+}
 .rounded-xl {
     border-radius: 0.75rem;
 }
+.border {
+    border-width: 1px;
+}
 .border-b-2 {
     border-bottom-width: 2px;
+}
+.border-gray-100 {
+    --tw-border-opacity: 1;
+    border-color: rgb(233 233 236 / var(--tw-border-opacity));
 }
 .border-white {
     --tw-border-opacity: 1;
@@ -1148,9 +1174,9 @@ video {
     letter-spacing: 0.25em;
 }
   
-  .hover\:text-primary:hover {
+  .hover\:text-white:hover {
     --tw-text-opacity: 1;
-    color: rgb(219 174 88 / var(--tw-text-opacity));
+    color: rgb(245 245 245 / var(--tw-text-opacity));
 }
   
   @media (min-width: 640px) {
@@ -1216,8 +1242,32 @@ video {
 
 
 
+    .md\:order-1 {
+        order: 1;
+    }
+
+
+
+    .md\:order-2 {
+        order: 2;
+    }
+
+
+
+    .md\:mt-0 {
+        margin-top: 0px;
+    }
+
+
+
     .md\:block {
         display: block;
+    }
+
+
+
+    .md\:flex {
+        display: flex;
     }
 
 
@@ -1228,8 +1278,41 @@ video {
 
 
 
+    .md\:w-auto {
+        width: auto;
+    }
+
+
+
+    .md\:flex-row {
+        flex-direction: row;
+    }
+
+
+
     .md\:justify-start {
         justify-content: flex-start;
+    }
+
+
+
+    .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(2rem * var(--tw-space-x-reverse));
+        margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+
+
+
+    .md\:border-none {
+        border-style: none;
+    }
+
+
+
+    .md\:bg-black {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 0 0 / var(--tw-bg-opacity));
     }
 
 
@@ -1243,12 +1326,6 @@ video {
 
 
 
-    .lg\:m-0 {
-        margin: 0px;
-    }
-
-
-
     .lg\:mb-4 {
         margin-bottom: 1rem;
     }
@@ -1257,12 +1334,6 @@ video {
 
     .lg\:w-50 {
         width: 50rem;
-    }
-
-
-
-    .lg\:p-0 {
-        padding: 0px;
     }
 
 

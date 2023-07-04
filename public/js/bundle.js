@@ -119,19 +119,30 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"index.js":[function(require,module,exports) {
 /* eslint-disable */
-var navbar = document.querySelector("header nav");
+var navbar = document.querySelector("header nav #navbar");
 var cookie = document.querySelector("cookie.cookie-popup");
 if (navbar) {
   document.querySelector("#menu-btn").onclick = function () {
-    navbar.classList.toggle("active");
+    navbar.classList.toggle("hidden");
+    searchForm.classList.remove("scale-y-100");
+    cartItem.classList.remove("right-0");
   };
   var cartItem = document.querySelector(".cart-items-container");
   document.querySelector("#cart-btn").onclick = function () {
     cartItem.classList.toggle("right-0");
+    navbar.classList.add("hidden");
+    searchForm.classList.remove("scale-y-100");
   };
   var searchForm = document.querySelector(".search-form");
   document.querySelector("#search-btn").onclick = function () {
     searchForm.classList.toggle("scale-y-100");
+    navbar.classList.add("hidden");
+    cartItem.classList.remove("right-0");
+  };
+  window.onscroll = function () {
+    navbar.classList.add("hidden");
+    searchForm.classList.remove("scale-y-100");
+    cartItem.classList.remove("right-0");
   };
 }
 if (cookie) {
@@ -177,7 +188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59864" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52384" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
